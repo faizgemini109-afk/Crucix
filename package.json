@@ -4,8 +4,8 @@
   "description": "Local intelligence engine - 27 OSINT sources, live dashboard, public demo at crucix.live, auto-refresh, optional LLM layer.",
   "type": "module",
   "scripts": {
-    "start": "node server.mjs",
-    "dev": "node --trace-warnings server.mjs",
+    "start": "node init && node server.mjs",
+    "dev": "node init && node --trace-warnings server.mjs",
     "sweep": "node apis/briefing.mjs",
     "inject": "node dashboard/inject.mjs",
     "brief": "node apis/briefing.mjs",
@@ -30,7 +30,9 @@
     "express": "^5.1.0"
   },
   "optionalDependencies": {
-    "discord.js": "^14.25.1"  },
+    "discord.js": "^14.25.1"
+  },
   "overrides": {
-    "undici": "^7.24.4"  }
+    "undici": "^7.24.4"
+  }
 }
